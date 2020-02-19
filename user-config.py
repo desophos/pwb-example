@@ -32,8 +32,8 @@ from __future__ import absolute_import, division, unicode_literals
 # If you use either of these functions to define the family to work on by
 # default (the ‘family’ variable below), you must place the function call
 # before the definition of the ‘family’ variable.
-register_families_folder('/app')
-register_family_file('projectgorgon', '/app/projectgorgon_family.py')
+register_families_folder('.')
+register_family_file('projectgorgon', 'projectgorgon_family.py')
 family = 'projectgorgon'
 
 # The language code of the site we're working on.
