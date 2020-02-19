@@ -9,3 +9,22 @@ Steps to reproduce:
 1. Clone this repository locally.
 2. Build an image from the Dockerfile.
 3. Run the image to see the problem in action.
+
+Alternatively, simply run `python pwb_example/main.py` if your Python has pywikibot installed.
+
+Traceback:
+----------
+```py
+Traceback (most recent call last):
+  File "pwb_example/main.py", line 10, in <module>
+    main()
+  File "pwb_example/main.py", line 5, in main
+    site = pywikibot.Site()
+  File "/usr/local/lib/python3.8/site-packages/pywikibot/__init__.py", line 1239, in Site
+    fam = Family.load(fam)
+  File "/usr/local/lib/python3.8/site-packages/pywikibot/tools/__init__.py", line 1744, in wrapper
+    return obj(*__args, **__kw)
+  File "/usr/local/lib/python3.8/site-packages/pywikibot/family.py", line 1008, in load
+    raise UnknownFamily('Family %s does not exist' % fam)
+pywikibot.exceptions.UnknownFamily: Family projectgorgon does not exist
+```
